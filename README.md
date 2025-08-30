@@ -12,7 +12,20 @@ Tkinter로 구현한 windows의 메모장 프로그램
 새 파일을 여는 기능. 
 이 버튼을 선택하면 파일 탐색기가 실행되고 원하는 텍스트 파일을 열 수 있음.
 <img width="802" height="669" alt="image" src="https://github.com/user-attachments/assets/f136617e-2a42-4ffd-9e29-66173fb29ce7" />
-
+#파일 열기
+def open_file():
+    global current_file
+    file_path = filedialog.askopenfilename(
+        defaultextension=".txt"
+    )
+    if file_path: 
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                text.delete(1.0, END)  # 기존 내용 지우기
+                text.insert(END, f.read())
+            current_file = file_path
+        except Exception as e:
+            messagebox.showerror("에러", f"파일을 열 수 없습니다.\n{e}")
 
 ### 2) 저장
 텍스트 입력 창에 입력된 내용을 파일로 저장할 수 있는 기능.
