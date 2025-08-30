@@ -9,6 +9,16 @@ Tkinter로 구현한 windows의 메모장 프로그램
 
 이 중에서 파일(F) 기능만 구현됨.
 파일(F) 메뉴 아래 열기 ,저장 , 끝내기 기능이 있음.
+```Python
+# 파일 메뉴
+
+file_menu = Menu( menu , tearoff = 0)
+file_menu.add_command(label = "열기" , command = open_file )
+file_menu.add_command(label = "저장" , command = save_file )
+file_menu.add_separator()
+file_menu.add_command(label = "끝내기" , command = root.quit)
+menu.add_cascade(label = "파일(F)" , menu = file_menu)
+```
 ### 1) 열기
 새 파일을 여는 기능. 
 이 버튼을 선택하면 파일 탐색기가 실행되고 원하는 텍스트 파일을 열 수 있음.
@@ -41,6 +51,7 @@ def open_file():
 텍스트 입력 창에 입력된 내용을 파일로 저장할 수 있는 기능.
 메모장에 원하는 내용을 입력하고 이 버튼을 누르면 파일 탐색기가 실행되고 'gui_basic' 파일 아래에 원하는 파일 이름을 작성하여 저장 가능.
 저장과 동시에 VScode gui_basic 폴더 아래 텍스트 파일(.txt) 형식으로 저장되고 VScode에서 바로 확인 가능함.
+
 <img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/f7d70e8a-64f1-4f0c-b2ce-75a527848ba2" />
 
 <img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/0c26b216-1bf3-4c6e-a9a0-cece15af5420" />
@@ -83,6 +94,11 @@ def save_as_file():
 ### 3) 끝내기
 이 버튼을 누르면 자동으로 메모장 프로그램이 종료됨.
 
+<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/3f9d4637-93c3-4a52-b533-0ce12f02634b" />
+
+```Python
+file_menu.add_command(label = "끝내기" , command = root.quit)
+```
 ## 2. 그 밖의 기능들
 1) 스크롤 바 기능
    창 오른쪽에 스크롤 바 존재. 만약 정해진 geometry 이상으로 내용을 작성하게 되면 스크롤 바 생성되며 실제로 창을 위아래로 움직일 수 있음.
