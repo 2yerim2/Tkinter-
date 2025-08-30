@@ -15,6 +15,9 @@ Tkinter로 구현한 windows의 메모장 프로그램
 
 <img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/94edf971-62bd-4003-9f2d-354ae107bef0" />
 
+<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/24ea8907-1587-48d7-a3a4-1b19021043e0" />
+
+
 
 ```Python
 #파일 열기
