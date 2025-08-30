@@ -11,7 +11,7 @@ Tkinter로 구현한 windows의 메모장 프로그램
 ### 1) 열기
 새 파일을 여는 기능. 
 이 버튼을 선택하면 파일 탐색기가 실행되고 원하는 텍스트 파일을 열 수 있음.
-<img width="802" height="669" alt="image" src="https://github.com/user-attachments/assets/f136617e-2a42-4ffd-9e29-66173fb29ce7" />
+<img width="600" height="589" alt="image" src="https://github.com/user-attachments/assets/f136617e-2a42-4ffd-9e29-66173fb29ce7" />
 
 ```Python
 #파일 열기
