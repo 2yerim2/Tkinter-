@@ -40,6 +40,44 @@ def open_file():
 텍스트 입력 창에 입력된 내용을 파일로 저장할 수 있는 기능.
 메모장에 원하는 내용을 입력하고 이 버튼을 누르면 파일 탐색기가 실행되고 'gui_basic' 파일 아래에 원하는 파일 이름을 작성하여 저장 가능.
 저장과 동시에 VScode gui_basic 폴더 아래 텍스트 파일(.txt) 형식으로 저장되고 VScode에서 바로 확인 가능함.
+<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/f7d70e8a-64f1-4f0c-b2ce-75a527848ba2" />
+
+<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/0c26b216-1bf3-4c6e-a9a0-cece15af5420" />
+
+<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/f96f401a-56d7-4780-8111-402b999d8d17" />
+
+```Python
+#파일 저장
+def save_file():
+    global current_file
+    if current_file:
+        try:
+            with open(current_file , "w",encoding = "utf-8") as f:
+                f.write(text.get(1.0 ,END))
+            messagebox.showinfo("저장 완료","파일이 저장되었습니다.")
+        except Exception as e:
+            messagebox.showinfo("에러",f"파일을 저장할 수 없습니다.\n{e}")
+    else:
+        save_as_file()
+        
+# 다른 이름으로 저장
+def save_as_file():
+    global current_file
+    file_path = filedialog.asksaveasfilename(
+        defaultextension=".txt",
+        filetypes=[("mynote.txt", "*.txt"), ("모든 파일", "*.*")]
+    )
+    if file_path:
+        try:
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(text.get(1.0, END))
+            current_file = file_path
+            root.title(f"{file_path} - Windows 메모장")
+            messagebox.showinfo("저장 완료", "파일이 저장되었습니다.")
+        except Exception as e:
+            messagebox.showerror("에러", f"파일을 저장할 수 없습니다.\n{e}")
+```
+
 
 ### 3) 끝내기
 이 버튼을 누르면 자동으로 메모장 프로그램이 종료됨.
