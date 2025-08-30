@@ -5,13 +5,14 @@ Tkinter로 구현한 windows의 메모장 프로그램
 
 ## 1. 상단 메뉴
 파일(F)  편집(E)  서식(C)  보기(V)  도움말
+<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/88ca3d82-d40e-49b6-af94-c3e2aecd9931" />
 
 이 중에서 파일(F) 기능만 구현됨.
 파일(F) 메뉴 아래 열기 ,저장 , 끝내기 기능이 있음.
 ### 1) 열기
 새 파일을 여는 기능. 
 이 버튼을 선택하면 파일 탐색기가 실행되고 원하는 텍스트 파일을 열 수 있음.
-<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/28644d8e-1b58-49d4-b00e-6c582042d8f5" />
+<img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/4f9e5314-cf46-4595-982b-c49b89d87468" />
 
 <img width="640" height="550" alt="image" src="https://github.com/user-attachments/assets/94edf971-62bd-4003-9f2d-354ae107bef0" />
 
